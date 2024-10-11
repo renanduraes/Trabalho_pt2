@@ -50,7 +50,7 @@ def add_contact():
     area = data.get("area")
     historia = data.get("historia")
 
-    # Lógica para salvar o contato (aqui você pode inserir no banco de dados ou processar os dados conforme necessário)
+   
 
     return jsonify({"message": "Contato enviado com sucesso mas ainda estamos sem banco de dados para salvar seus dados"}),200
 
