@@ -41,5 +41,18 @@ def get_contatos(estado):
         return jsonify({'error': 'Contatos não encontrados para este estado.'}), 404
 
 
+@app.route('/add', methods=['POST'])
+def add_contact():
+    data = request.get_json()
+    estado = data.get("estado")
+    instituicao = data.get("instituicao")
+    telefone = data.get("telefone")
+    area = data.get("area")
+    historia = data.get("historia")
+
+    # Lógica para salvar o contato (aqui você pode inserir no banco de dados ou processar os dados conforme necessário)
+
+    return jsonify({"message": "Contato enviado com sucesso mas ainda estamos sem banco de dados para salvar seus dados"}),200
+
 if __name__ == '__main__':
     app.run(debug=True)
